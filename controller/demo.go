@@ -14,3 +14,7 @@ func (DemoApi DemoApi) DoController(c *gin.Context) {
 	// call service method
 	demoService.DoService()
 }
+
+func (DemoApi DemoApi) GetController(c *gin.Context) {
+	name := c.Param("name")
+}
