@@ -17,4 +17,6 @@ func (DemoApi DemoApi) DoController(c *gin.Context) {
 
 func (DemoApi DemoApi) GetController(c *gin.Context) {
 	name := c.Param("name")
+	Response
+	return
 }
