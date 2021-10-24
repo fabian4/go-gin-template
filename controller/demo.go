@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"github.com/fabian4/go-gin-template/response"
 	"github.com/fabian4/go-gin-template/service"
 	"github.com/gin-gonic/gin"
 )
@@ -16,7 +17,7 @@ func (DemoApi DemoApi) DoController(c *gin.Context) {
 }
 
 func (DemoApi DemoApi) GetController(c *gin.Context) {
-	name := c.Param("name")
-	Response
+	name := c.Query("name")
+	response.Success(c, name)
 	return
 }
