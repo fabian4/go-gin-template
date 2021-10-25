@@ -18,6 +18,10 @@ func (DemoApi DemoApi) DoController(c *gin.Context) {
 
 func (DemoApi DemoApi) GetController(c *gin.Context) {
 	name := c.Query("name")
-	response.Success(c, name)
+	sex := c.DefaultQuery("sex", "male")
+	//response.Success(c, map[string]{
+	//	"name": name,
+	//	"sex": sex,
+	//})
 	return
 }
