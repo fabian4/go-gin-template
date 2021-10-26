@@ -7,9 +7,10 @@ import (
 
 var baseApi = controller.BaseApi{}
 
-func InitDemoRouter(r *gin.Engine) {
+func InitBaseRouter(r *gin.Engine) {
 	r.GET("/demo", baseApi.DoController)
 	r.GET("/get", baseApi.GetController)
 	r.POST("/form", baseApi.PostFormController)
 	r.POST("/json", baseApi.PostJsonController)
+	r.POST("/res", baseApi.PostJsonFromStrutController)
 }
