@@ -28,6 +28,16 @@ func (BaseApi *BaseApi) GetController(c *gin.Context) {
 	return
 }
 
+func (BaseApi *BaseApi) GetPathParamController(c *gin.Context) {
+	name := c.Param("name")
+	sex := c.DefaultQuery("sex", "male")
+	response.Success(c, map[string]string{
+		"name": name,
+		"sex":  sex,
+	})
+	return
+}
+
 func (BaseApi *BaseApi) PostFormController(c *gin.Context) {
 	name := c.PostForm("name")
 	sex := c.DefaultPostForm("sex", "male")
