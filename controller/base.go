@@ -49,7 +49,7 @@ func (BaseApi *BaseApi) PostFormController(c *gin.Context) {
 }
 
 func (BaseApi *BaseApi) PostJsonController(c *gin.Context) {
-	// request参数绑定map结构
+	// request 参数绑定map结构
 	json := make(map[string]string)
 	_ = c.Bind(&json)
 	response.Success(c, map[string]string{
@@ -60,7 +60,7 @@ func (BaseApi *BaseApi) PostJsonController(c *gin.Context) {
 }
 
 func (BaseApi *BaseApi) PostJsonFromStrutController(c *gin.Context) {
-	// request参数绑定自定义结构体
+	// request 参数绑定自定义结构体
 	json := base2.NameAndAge{}
 	_ = c.Bind(&json)
 	response.Success(c, base.NameAndAge{
